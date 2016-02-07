@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Color Preview </title>
+	<!-- Material Icon Font -->
+	<link rel="sylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Material Design Lite !-->
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+	<!--Custom LESS Styling -->
+	<link rel="stylesheet/less" type="text/css" href="style.less">
+	<!-- LESS JS -->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.0.0/less.min.js"></script>
+	<!-- Material Design Lite JS -->
+	<script type="test/javascript" src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+</head>
+
+	<body id="home" class="mdl-layout mdl-js-layout mdl-layout--fixed-header"
+	ng-controller="colorFinder">
+
+			<header class="mdl-layout__header header-section">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<span class="mdl-layout-title"> Color Preview </span>
+					<!-- spacer, align nav to right -->
+					<div class="mdl-layout-spacer"></div>
+					<!-- Navigation only on large screens -->
+					<nav class="mdl-navigation mdl-layout--large-screen-only">
+						<a class="mdl-navigation_link" href="#"></a>
+					</nav>
+
+				</div>
+			</header>
+
+			<main class="mdl-layout_content">
+
+				<div class="large-ribbon" ng-style="{color: selectedColor}"></div>
+
+				<div class="body-margin courses-search">
+					<!-- Input field for search -->
+					<div class="search-box mdl-card mdl-shadow--2dp">
+						<div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" ng-model="selectedColor" />
+							<label class="mdl-textfield__label" for="sample2">Red</label>
+						</div>
+						<div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" ng-model="green"/>
+							<label class="mdl-textfield__label">Green</label>
+						</div>
+						<div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" ng-model="blue" />
+							<label class="mdl-textfield__label">Blue</label>
+						</div>
+					</div>
+				</div>
+			</main>
+
+		<!-- JS Resources -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>	
