@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" ng-app="colorApp">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Color Preview </title>
@@ -33,23 +33,24 @@
 
 			<main class="mdl-layout_content">
 
-				<div class="large-ribbon" ng-style="{color: selectedColor}"></div>
+				<div class="large-ribbon" style="background-color: rgb({{redRGB}}, {{greenRGB}}, {{blueRGB}})"></div>
 
 				<div class="body-margin courses-search">
 					<!-- Input field for search -->
 					<div class="search-box mdl-card mdl-shadow--2dp">
 						<div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text" ng-model="selectedColor" />
-							<label class="mdl-textfield__label" for="sample2">Red</label>
+							<input class="mdl-textfield__input" type="text" ng-model="redRGB" />
+							<label class="mdl-textfield__label" ng-show="!redRGB.length" for="sample2">Red</label>
 						</div>
 						<div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text" ng-model="green"/>
-							<label class="mdl-textfield__label">Green</label>
+							<input class="mdl-textfield__input" type="text" ng-model="greenRGB"/>
+							<label class="mdl-textfield__label" ng-show="!greenRGB.length">Green</label>
 						</div>
 						<div class="full-width mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text" ng-model="blue" />
-							<label class="mdl-textfield__label">Blue</label>
+							<input class="mdl-textfield__input" type="text" ng-model="blueRGB" />
+							<label class="mdl-textfield__label" ng-show="!blueRGB.length">Blue</label>
 						</div>
+						<p> rgb({{ redRGB | number }}, {{greenRGB | number}}, {{blueRGB | number}}) </p>
 					</div>
 				</div>
 			</main>
