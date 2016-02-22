@@ -17,7 +17,7 @@
 	<body id="home" class="mdl-layout mdl-js-layout mdl-layout--fixed-header"
 	ng-controller="colorFinder">
 
-			<header class="mdl-layout__header header-section">
+			<header class="mdl-layout__header header-section" style="background-color:rgb({{redRGB}}, {{greenRGB}}, {{blueRGB}});">
 				<div class="mdl-layout__header-row">
 					<!-- Title -->
 					<span class="mdl-layout-title"> Color Preview </span>
@@ -51,6 +51,7 @@
 							<label class="mdl-textfield__label" ng-show="!blueRGB.length">Blue</label>
 						</div>
 						<p> rgb({{ redRGB | number }}, {{greenRGB | number}}, {{blueRGB | number}}) </p>
+						<p> {{ hex }} </p>
 					</div>
 				</div>
 			</main>
